@@ -1,13 +1,14 @@
 body {
     background-color: #22254b;
 }
-
+h2 {
+    color: white;
+}
 .app-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .movie-container {
     width: 250px;
     margin: 16px;
@@ -15,23 +16,45 @@ body {
     color: white;
     border-radius: 5px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden
 }
+
+.movie-container .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movie-container:hover .overview {
+    display: flex; /* 마우스를 올릴 때 overview가 나타나도록 함 */
+}
+
+.overview p {
+    margin: 0;
+    max-width: 80%;
+}
+
+
 
 .movie-container img {
     max-width: 100%;
 }
-
 .movie-info {
     display: flex;
     padding: 20px;
     justify-content: space-between;
-    align-items: center;
 }
-
 .movie-info h4 {
     margin : 0;
 }
-
 .movie-info span {
-    margin-left: 3px;
+    margin: 3px;
 }
