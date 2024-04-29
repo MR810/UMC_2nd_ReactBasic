@@ -23,7 +23,7 @@ export default function Movie({ title, poster_path, vote_average, overview }) {
             </div>
             {showOverview && (
                 <div className='overview'>
-                    <p>{title}</p>
+                    <h4>{title}</h4>
                     <p>{overview}</p>
                 </div>
             )}
